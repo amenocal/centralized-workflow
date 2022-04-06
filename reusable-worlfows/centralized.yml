@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Centralized-Build
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches-ignore: main
+  workflow_call:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Reusable-workflow-example:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: Set Deps
+      run: echo "Setting base dependencies...
+    - name: Run Security Scan
+      run: echo "Running a security scan set by IT..."
+    - name: Look for spooky secrets
+      run: echo "looking for things in the shadows..."
+    - name: Adding company secret sauce
+      run: echo "Its just mayo and relish"
