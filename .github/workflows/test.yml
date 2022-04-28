@@ -17,8 +17,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Set Deps
-      run: echo "Setting base dependencies...
+    - name: test
+      run: echo "Var:[$VAR]"
     - name: Run Security Scan
       run: echo "Running a security scan set by IT..."
     - name: Look for spooky secrets
