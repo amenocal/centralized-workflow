@@ -8,6 +8,11 @@ on:
   push:
     branches-ignore: main
   workflow_call:
+    inputs:
+      VAR:
+        required: true
+        type: string
+        default: abc
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -18,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: test
-      run: echo "Var:[$VAR]"
+      run: echo "Var:[${{ inputs.VAR }}]"
     - name: Run Security Scan
       run: echo "Running a security scan set by IT..."
     - name: Look for spooky secrets
